@@ -6,39 +6,20 @@ import { useNavigate } from 'react-router-dom';
 const upcomingEvents = [
   {
     id: 1,
-    title: 'Startup Weekend',
-    date: '2024-03-15',
+    title: 'Zennith: Official E-SUMMIT of MAIT',
+    date: '2025-03-26',
     time: '09:00 AM',
-    location: 'Main Auditorium',
+    location: 'MAIT Campus',
     description: '54-hour weekend event where groups of developers, business managers, startup enthusiasts, marketing experts, and graphic artists pitch ideas for new startup companies.',
-    image:'/utils/zennith_poster.jpg',
-    category: 'Workshop'
+    image: '/utils/zennith_poster.jpg',
+    category: 'E-SUMMIT'
   },
-  {
-    id: 2,
-    title: 'Venture Capital Panel',
-    date: '2024-03-20',
-    time: '02:00 PM',
-    location: 'Conference Hall',
-    description: 'Leading venture capitalists share insights on startup funding and investment strategies.',
-    image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=1920&q=80',
-    category: 'Panel Discussion'
-  },
-  {
-    id: 3,
-    title: 'Tech Innovation Summit',
-    date: '2024-04-05',
-    time: '10:00 AM',
-    location: 'Innovation Hub',
-    description: 'Annual summit showcasing the latest technological innovations and startup opportunities.',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80',
-    category: 'Conference'
-  }
+
 ];
 
 const pastEvents = [
   {
-    id: 4,
+    id: 2,
     title: 'AI in Business Summit',
     date: '2024-02-15',
     time: '10:00 AM',
@@ -54,23 +35,7 @@ const pastEvents = [
     ],
     outcomes: 'The summit resulted in multiple partnerships between startups and established companies, fostering innovation in AI implementation across various sectors.'
   },
-  {
-    id: 5,
-    title: 'Startup Funding Workshop',
-    date: '2024-02-01',
-    time: '02:00 PM',
-    location: 'Innovation Center',
-    description: 'Interactive workshop on securing startup funding and crafting compelling pitch decks.',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1920&q=80',
-    category: 'Workshop',
-    highlights: [
-      'Hands-on pitch deck creation sessions',
-      'One-on-one mentoring with VCs',
-      'Funding strategy development',
-      'Real-world case studies analysis'
-    ],
-    outcomes: 'Participating startups secured over $2M in seed funding within 3 months of the workshop.'
-  }
+
 ];
 
 const EventModal = ({ event, isOpen, onClose }) => {
@@ -155,14 +120,6 @@ const EventList = ({ events, isPast }) => {
   const navigate = useNavigate();
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const handleButtonClick = (event, isPast) => {
-    if (isPast) {
-      setSelectedEvent(event);
-    } else {
-      navigate('/contact');
-    }
-  };
-
   return (
     <>
       <motion.div
@@ -213,14 +170,38 @@ const EventList = ({ events, isPast }) => {
                     <span>Limited Seats</span>
                   </div>
                 </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn btn-primary"
-                  onClick={() => handleButtonClick(event, isPast)}
-                >
-                  {isPast ? 'View Details' : 'Register Now'}
-                </motion.button>
+                <div className="flex gap-4">
+                  {!isPast && (
+                    <>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="btn btn-primary"
+                        onClick={() => navigate('/contact')}
+                      >
+                        Register Now
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="btn btn-primary"
+                        onClick={() => setSelectedEvent(event)}
+                      >
+                        View Details
+                      </motion.button>
+                    </>
+                  )}
+                  {isPast && (
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="btn btn-primary"
+                      onClick={() => setSelectedEvent(event)}
+                    >
+                      View Details
+                    </motion.button>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>
