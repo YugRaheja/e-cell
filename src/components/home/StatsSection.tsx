@@ -5,23 +5,23 @@ import { Users, Rocket, Calendar, Award } from 'lucide-react';
 const stats = [
   {
     icon: Users,
-    value: '1000+',
-    label: 'Students Mentored',
+    value: '70+',
+    label: 'Active Members',
   },
   {
     icon: Rocket,
-    value: '50+',
-    label: 'Startups Launched',
+    value: '200+',
+    label: 'Alumni Network',
   },
   {
     icon: Calendar,
-    value: '100+',
-    label: 'Events Organized',
+    value: '10+',
+    label: 'Years of Excellence',
   },
   {
     icon: Award,
-    value: '20+',
-    label: 'Awards Won',
+    value: '50+',
+    label: 'Strategic Partners',
   },
 ];
 
