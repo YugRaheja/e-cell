@@ -71,4 +71,5 @@ export interface BlogPost {
   category: string;
   readTime: number;
   image: string;
+  websiteUrl: string;
 }
