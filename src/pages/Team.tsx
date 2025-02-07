@@ -196,12 +196,12 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: '17',
-    name: 'Shubhashish Panda',
-    role: 'Grapics',
+    name: 'Nalin',
+    role: 'Research and Development',
     category: 'Coordinators',
-    image: shubhashish,
+    image: nalin,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/subhasishpanda25/',
+      linkedin: 'https://www.linkedin.com/in/nalin-khanna-877a99246/',
     },
   },
   {
@@ -234,12 +234,12 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: '21',
-    name: 'Nalin',
-    role: 'Research and Development',
+    name: 'Shubhashish Panda',
+    role: 'Grapics',
     category: 'Coordinators',
-    image: nalin,
+    image: shubhashish,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/nalin-khanna-877a99246/',
+      linkedin: 'https://www.linkedin.com/in/subhasishpanda25/',
     },
   },
   {
