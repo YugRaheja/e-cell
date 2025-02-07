@@ -6,7 +6,19 @@ import { useNavigate } from 'react-router-dom';
 const upcomingEvents = [
   {
     id: 1,
-    title: 'Zennith: Official E-SUMMIT of MAIT',
+    title: (
+      <>
+        <a
+          href="https://zennith-esummit.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="zennith-link"
+        >
+          Zennith
+        </a>{' '}
+        : Official E-SUMMIT of MAIT
+      </>
+    ),
     date: '2025-03-26',
     time: '09:00 AM',
     location: 'MAIT Campus',
