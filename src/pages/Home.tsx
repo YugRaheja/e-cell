@@ -4,6 +4,7 @@ import HeroSection from '../components/home/HeroSection';
 import StatsSection from '../components/home/StatsSection';
 import FeaturedStartups from '../components/home/FeaturedStartups';
 import NewsletterSection from '../components/home/NewsletterSection';
+import SocialBar from '../components/home/SocialBar';
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
         <StatsSection />
         <FeaturedStartups />
         <NewsletterSection />
+        <SocialBar />
       </div>
     </div>
   );

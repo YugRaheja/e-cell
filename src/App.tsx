@@ -9,9 +9,7 @@ import InteractiveBackground from './components/shared/InteractiveBackground';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Team = React.lazy(() => import('./pages/Team'));
-const Programs = React.lazy(() => import('./pages/Programs'));
 const Events = React.lazy(() => import('./pages/Events'));
-const Startups = React.lazy(() => import('./pages/Startups'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const Contact = React.lazy(() => import('./pages/Contact'));
@@ -35,9 +33,7 @@ function App() {
                 <Route path="/" element={<PageTransition><Home /></PageTransition>} />
                 <Route path="/about" element={<PageTransition><About /></PageTransition>} />
                 <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
-                <Route path="/programs" element={<PageTransition><Programs /></PageTransition>} />
                 <Route path="/events" element={<PageTransition><Events /></PageTransition>} />
-                <Route path="/startups" element={<PageTransition><Startups /></PageTransition>} />
                 <Route path="/resources" element={<PageTransition><Resources /></PageTransition>} />
                 <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
                 <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
