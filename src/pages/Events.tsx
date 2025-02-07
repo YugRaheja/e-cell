@@ -6,71 +6,72 @@ import { useNavigate } from 'react-router-dom';
 const upcomingEvents = [
   {
     id: 1,
-    title: 'Startup Weekend',
-    date: '2024-03-15',
+    title: 'Zennith: Official E-SUMMIT of MAIT',
+    date: '2025-03-26',
     time: '09:00 AM',
-    location: 'Main Auditorium',
-    description: '54-hour weekend event where groups of developers, business managers, startup enthusiasts, marketing experts, and graphic artists pitch ideas for new startup companies.',
-    image:'/utils/zennith_poster.jpg',
-    category: 'Workshop'
+    location: 'MAIT Campus',
+    description: 'E-Summit at MAIT is a premier entrepreneurship event designed to foster innovation, leadership, and startup culture among students. It brings together industry leaders, startup founders, investors, and aspiring entrepreneurs through keynote sessions, panel discussions, workshops, and pitch competitions. The summit provides a platform for networking, mentorship, and funding opportunities, empowering students to turn their ideas into successful ventures. 🚀',
+    image: '/utils/zennith_poster.jpg',
+    category: 'E-SUMMIT'
   },
-  {
-    id: 2,
-    title: 'Venture Capital Panel',
-    date: '2024-03-20',
-    time: '02:00 PM',
-    location: 'Conference Hall',
-    description: 'Leading venture capitalists share insights on startup funding and investment strategies.',
-    image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=1920&q=80',
-    category: 'Panel Discussion'
-  },
-  {
-    id: 3,
-    title: 'Tech Innovation Summit',
-    date: '2024-04-05',
-    time: '10:00 AM',
-    location: 'Innovation Hub',
-    description: 'Annual summit showcasing the latest technological innovations and startup opportunities.',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80',
-    category: 'Conference'
-  }
+
 ];
 
 const pastEvents = [
   {
-    id: 4,
-    title: 'AI in Business Summit',
-    date: '2024-02-15',
+    id: 2,
+    title: 'Entrepreneurship Awareness Drive (EAD)',
+    date: '2024-10-10',
     time: '10:00 AM',
-    location: 'Digital Hub',
-    description: 'Explored the transformative impact of AI on modern business landscapes and future opportunities.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1920&q=80',
-    category: 'Conference',
+    location: 'MAIT Campus',
+    description: 'The Entrepreneurship Awareness Drive (EAD) at MAIT inspires students to explore entrepreneurship by providing insights into startups, innovation, and business opportunities.',
+    image: '/utils/IMG_1274.jpg',
+    category: 'Session',
     highlights: [
-      'Over 500 attendees from leading tech companies',
-      'Keynote speakers from Google, Microsoft, and Amazon',
-      'Interactive AI demos and workshops',
-      'Networking sessions with industry leaders'
+      '✅ Introduction to entrepreneurship and the startup ecosystem.',
+      '✅ Keynote sessions by successful entrepreneurs and industry leaders.',
+      '✅ Workshops on ideation, business models, and fundraising.',
+      '✅ Networking opportunities with mentors, investors, and startup founders.',
+      '✅ Exciting opportunities for internships, projects, and startup support.'
     ],
-    outcomes: 'The summit resulted in multiple partnerships between startups and established companies, fostering innovation in AI implementation across various sectors.'
+    outcomes: '🚀 Enhanced Awareness: Students gained a deeper understanding of entrepreneurial opportunities.🌟 Active Engagement: Increased participation in startup-related initiatives and EDC programs.🤝 Networking & Mentorship: Attendees connected with experienced entrepreneurs and investors.💡 Idea Development: Encouraged students to think innovatively and take the first step toward'
   },
   {
-    id: 5,
-    title: 'Startup Funding Workshop',
-    date: '2024-02-01',
-    time: '02:00 PM',
-    location: 'Innovation Center',
-    description: 'Interactive workshop on securing startup funding and crafting compelling pitch decks.',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1920&q=80',
-    category: 'Workshop',
-    highlights: [
-      'Hands-on pitch deck creation sessions',
-      'One-on-one mentoring with VCs',
-      'Funding strategy development',
-      'Real-world case studies analysis'
-    ],
-    outcomes: 'Participating startups secured over $2M in seed funding within 3 months of the workshop.'
-  }
+  id: 3,
+  title: 'ORIENTATION SESSION',
+  date: '2024-09-11',
+  time: '11:00 AM',
+  location: 'MAIT AUDITORIUM',
+  description: 'The Orientation of the Entrepreneurship Development Cell (EDC) at MAIT introduces students to the world of startups, innovation, and business opportunities.',
+  image: '/utils/IMG_1921.jpg',
+  category: 'Meeting',
+  highlights: [
+    '✅ Introduction to EDC’s vision, mission, and initiatives.',
+    '✅ Insights from successful entrepreneurs and industry leaders.',
+    '✅ Workshops on ideation, startup development, and business strategies.',
+    '✅ Networking with mentors, investors, and like-minded peers.',
+    '✅ Exciting opportunities for internships, projects, and funding support.'
+  ],
+  outcomes: '🚀 Increased Awareness: Students gained insights into entrepreneurship and startup ecosystems.🌟 Active Participation: More students joined EDC, engaging in upcoming events and activities.🤝 Networking & Mentorship: Attendees connected with industry leaders and startup mentors.💡 Idea Generation: Encouraged students to brainstorm and develop their entrepreneurial ideas.'
+},
+{
+  id: 3,
+  title: 'HACKNOVATE',
+  date: '2024-04-25',
+  time: '09:00 AM',
+  location: 'MAIT Campus',
+  description: 'Hacknovate is a premier hackathon at MAIT that challenges innovators and developers to create cutting-edge solutions through coding, creativity, and collaboration.',
+  image: '/utils/hacknovate final.jpg',
+  category: 'Competetion',
+  highlights: [
+    '✅ 24/36-hour coding challenge with real-world problem statements.',
+    '✅ Workshops & mentorship from industry experts.',
+    '✅ Exciting prizes, internships, and funding opportunities for winners.',
+    '✅ Networking with tech leaders, startups, and fellow innovators.',
+    '✅ Open to students, developers, and tech enthusiasts from all backgrounds.'
+  ],
+  outcomes: '🚀 Successful Prototypes & Solutions: Participants built innovative tech solutions addressing industry challenges. 🏆 Winning Teams Recognized: Top teams received cash prizes, mentorship, and internship offers. 🤝 Networking & Collaboration: Students connected with industry leaders, startups, and fellow tech enthusiasts.💡 Skill Enhancement: Participants gained hands-on experience in coding, problem-solving, and teamwork.'
+},
 ];
 
 const EventModal = ({ event, isOpen, onClose }) => {
@@ -155,14 +156,6 @@ const EventList = ({ events, isPast }) => {
   const navigate = useNavigate();
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const handleButtonClick = (event, isPast) => {
-    if (isPast) {
-      setSelectedEvent(event);
-    } else {
-      navigate('/contact');
-    }
-  };
-
   return (
     <>
       <motion.div
@@ -213,14 +206,38 @@ const EventList = ({ events, isPast }) => {
                     <span>Limited Seats</span>
                   </div>
                 </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn btn-primary"
-                  onClick={() => handleButtonClick(event, isPast)}
-                >
-                  {isPast ? 'View Details' : 'Register Now'}
-                </motion.button>
+                <div className="flex gap-4">
+                  {!isPast && (
+                    <>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="btn btn-primary"
+                        onClick={() => navigate('/contact')}
+                      >
+                        Register Now
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="btn btn-primary"
+                        onClick={() => setSelectedEvent(event)}
+                      >
+                        View Details
+                      </motion.button>
+                    </>
+                  )}
+                  {isPast && (
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="btn btn-primary"
+                      onClick={() => setSelectedEvent(event)}
+                    >
+                      View Details
+                    </motion.button>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>

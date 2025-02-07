@@ -1,46 +1,301 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Linkedin, Twitter, Github } from 'lucide-react';
+import { Linkedin} from 'lucide-react';
 import type { TeamMember } from '../types';
+//core pics
+import ayush from '../pics/Ayush.png'
+import jiya from '../pics/Jiya.png'
+import akshat from '../pics/akshat.png'
+import anushka from '../pics/ansuhka.png'
+import anurag from '../pics/anurag.png'
+import harprabh from '../pics/harprabh.png'
+import harshit from '../pics/harshit.png'
+import kartik from '../pics/kartik.png'
+import rishab from '../pics/rishab.png'
+import vansh from '../pics/vansh.png'
+import varun from '../pics/varun.png'
+import aakash from '../pics/Aakash.png'
+//coordinators pics
+import sarthak from '../pics/sarthak.png'
+import ansh from '../pics/ansh.png'
+import priya from '../pics/priya.png'
+import skj from '../pics/skj.png'
+import nalin from '../pics/nalin.png'
+import manas from '../pics/manas.png'
+import sid from '../pics/siddharta.png'
+import himanshu from '../pics/himanshu.png'
+import sanchit from '../pics/sanchit.png'
+import shubhashish from '../pics/Shubhashish.png'
+import dhruv from '../pics/dhruv.png'
+import nishant from '../pics/nishant.png'
+import arnav from '../pics/arnav.png'
+import aditya from '../pics/aditya.png'
+
 
 const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
+    name: 'Ayush Narayan Kamal',
     role: 'President',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80',
+    category: 'Core Team',
+    image: ayush ,
     socialLinks: {
-      linkedin: '#',
-      twitter: '#',
-      github: '#',
+      linkedin: 'https://www.linkedin.com/in/ayush-narayan-kamal-62b094229/',
     },
   },
   {
     id: '2',
-    name: 'Michael Chen',
+    name: 'Jiya Verma',
     role: 'Vice President',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
+    category: 'Core Team',
+    image: jiya,
     socialLinks: {
-      linkedin: '#',
-      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/jiyaverma/',
     },
   },
   {
     id: '3',
-    name: 'Emily Rodriguez',
-    role: 'Technical Lead',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80',
+    name: 'Akshat Jindal',
+    role: 'General Secretary',
+    category: 'Core Team',
+    image: akshat,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/akshat-jindal-4285b1208/',
+    },
+  },
+  {
+    id: '4',
+    name: 'Anushka Dubey',
+    role: 'Treasurer',
+    category: 'Core Team',
+    image: anushka,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/anushka-dubey-0b9817231/',
+    },
+  },
+  {
+    id: '5',
+    name: 'Varun Punia',
+    role: 'Core Team Lead',
+    category: 'Core Team',
+    image: varun,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/varun-punia-068841229/',
+    },
+  },
+  {
+    id: '6',
+    name: 'Rishabh',
+    role: 'Event Head',
+    category: 'Core Team',
+    image: rishab,
     socialLinks: {
       linkedin: '#',
-      github: '#',
+    },
+  },
+  {
+    id: '7',
+    name: 'Harprabh Singh',
+    role: 'Logistic Head',
+    category: 'Core Team',
+    image: harprabh,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/harprabh-singh-42a9a5225/edit/forms/next-action/after-connect-add-position/',
+    },
+  },
+  {
+    id: '8',
+    name: 'Aakash',
+    role: 'Logistic Head',
+    category: 'Core Team',
+    image: aakash,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '9',
+    name: 'Vansh',
+    role: 'Logistic Head',
+    category: 'Core Team',
+    image: vansh,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '10',
+    name: 'Harshit',
+    role: 'Content Head',
+    category: 'Core Team',
+    image: harshit,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '11',
+    name: 'Anurag Sahani',
+    role: 'Creative Head',
+    category: 'Core Team',
+    image: anurag,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/anurag-sahani-145b03232/',
+    },
+  },
+  {
+    id: '12',
+    name: 'Kartik Suri',
+    role: 'PR Head',
+    category: 'Core Team',
+    image: kartik,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  //Coordinators
+  {
+    id: '13',
+    name: 'Sarthak Jain',
+    role: 'Event Lead',
+    category: 'Coordinators',
+    image: sarthak,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/sarthak-jain2902/',
+    },
+  },
+  {
+    id: '14',
+    name: 'Ansh Kapila',
+    role: 'Graphics Lead',
+    category: 'Coordinators',
+    image: ansh,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/anshkapila/',
+    },
+  },
+  {
+    id: '15',
+    name: 'Priya Talreja',
+    role: 'Graphics Lead',
+    category: 'Coordinators',
+    image: priya,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/priya-talreja-a325b5249/',
+    },
+  },
+  {
+    id: '16',
+    name: 'Manas Ishwar',
+    role: 'Content Lead',
+    category: 'Coordinators',
+    image: manas,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/manas-ishwar-910078303/',
+    },
+  },
+  {
+    id: '17',
+    name: 'Shubhashish Panda',
+    role: 'Grapics',
+    category: 'Coordinators',
+    image: shubhashish,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/subhasishpanda25/',
+    },
+  },
+  {
+    id: '18',
+    name: 'Arnav Pathak',
+    category: 'Coordinators',
+    image: arnav,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/profile-of-arnav-pathak/',
+    },
+  },
+  {
+    id: '19',
+    name: 'Nishant Rao',
+    category: 'Coordinators',
+    image: nishant,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '20',
+    name: 'Shivam Kumar Jha',
+    role: 'Research and Development',
+    category: 'Coordinators',
+    image: skj,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '21',
+    name: 'Nalin',
+    role: 'Research and Development',
+    category: 'Coordinators',
+    image: nalin,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/nalin-khanna-877a99246/',
+    },
+  },
+  {
+    id: '22',
+    name: 'Aditya Rawat',
+    role: 'Event',
+    category: 'Coordinators',
+    image: aditya,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/adityarwt/',
+    },
+  },
+  {
+    id: '23',
+    name: 'Siddharta',
+    category: 'Coordinators',
+    image: sid,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '24',
+    name: 'Dhruv Anand',
+    role: 'Event',
+    category: 'Coordinators',
+    image: dhruv,
+    socialLinks: {
+      linkedin: '#',
+    },
+  },
+  {
+    id: '25',
+    name: 'Himanshu Vishwakarma',
+    category: 'Coordinators',
+    image: himanshu,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/himanshu-vishwakarma-a3766a258/',
+    },
+  },
+  {
+    id: '26',
+    name: 'Sanchit',
+    role: 'Content',
+    category: 'Coordinators',
+    image: sanchit,
+    socialLinks: {
+      linkedin: '#',
     },
   },
 ];
 
-const categories = ['All', 'Leadership', 'Technical', 'Marketing', 'Operations'];
+const categories = ['Core Team', 'Coordinators'];
 
 const Team: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Core Team');
 
   return (
     <div className="min-h-screen py-20">
@@ -80,42 +335,34 @@ const Team: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-11"
           >
-            {teamMembers.map((member) => (
-              <motion.div
-                key={member.id}
-                whileHover={{ y: -10 }}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-primary-500 mb-4">{member.role}</p>
-                  <div className="flex gap-4">
-                    {member.socialLinks.linkedin && (
-                      <a href={member.socialLinks.linkedin} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                    )}
-                    {member.socialLinks.twitter && (
-                      <a href={member.socialLinks.twitter} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
-                        <Twitter className="w-5 h-5" />
-                      </a>
-                    )}
-                    {member.socialLinks.github && (
-                      <a href={member.socialLinks.github} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
+            {teamMembers
+              .filter((member) => member.category === selectedCategory)
+              .map((member) => (
+                <motion.div
+                  key={member.id}
+                  whileHover={{ y: -10 }}
+                  className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                    <p className="text-primary-500 mb-4">{member.role}</p>
+                    <div className="flex gap-4">
+                      {member.socialLinks.linkedin && (
+                        <a href={member.socialLinks.linkedin} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
           </motion.div>
         </AnimatePresence>
       </div>
