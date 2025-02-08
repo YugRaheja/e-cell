@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Linkedin} from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import type { TeamMember } from '../types';
 //core pics
 import ayush from '../pics/Ayush.png'
@@ -38,9 +39,10 @@ const teamMembers: TeamMember[] = [
     name: 'Ayush Narayan Kamal',
     role: 'President',
     category: 'Core Team',
-    image: ayush ,
+    image: ayush,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/ayush-narayan-kamal-62b094229/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -51,6 +53,7 @@ const teamMembers: TeamMember[] = [
     image: jiya,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/jiyaverma/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -61,6 +64,7 @@ const teamMembers: TeamMember[] = [
     image: akshat,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/akshat-jindal-4285b1208/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -71,6 +75,7 @@ const teamMembers: TeamMember[] = [
     image: anushka,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/anushka-dubey-0b9817231/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -81,6 +86,7 @@ const teamMembers: TeamMember[] = [
     image: varun,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/varun-punia-068841229/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -91,6 +97,7 @@ const teamMembers: TeamMember[] = [
     image: rishab,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -101,6 +108,7 @@ const teamMembers: TeamMember[] = [
     image: harprabh,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/harprabh-singh-42a9a5225/edit/forms/next-action/after-connect-add-position/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -111,6 +119,7 @@ const teamMembers: TeamMember[] = [
     image: aakash,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -121,6 +130,7 @@ const teamMembers: TeamMember[] = [
     image: vansh,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -131,6 +141,7 @@ const teamMembers: TeamMember[] = [
     image: harshit,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -141,6 +152,7 @@ const teamMembers: TeamMember[] = [
     image: anurag,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/anurag-sahani-145b03232/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -151,6 +163,7 @@ const teamMembers: TeamMember[] = [
     image: kartik,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   //Coordinators
@@ -162,6 +175,7 @@ const teamMembers: TeamMember[] = [
     image: sarthak,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/sarthak-jain2902/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -182,6 +196,7 @@ const teamMembers: TeamMember[] = [
     image: priya,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/priya-talreja-a325b5249/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -192,6 +207,7 @@ const teamMembers: TeamMember[] = [
     image: manas,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/manas-ishwar-910078303/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -202,24 +218,29 @@ const teamMembers: TeamMember[] = [
     image: shubhashish,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/subhasishpanda25/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
     id: '18',
     name: 'Arnav Pathak',
+    role: '',
     category: 'Coordinators',
     image: arnav,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/profile-of-arnav-pathak/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
     id: '19',
     name: 'Nishant Rao',
+    role: '',
     category: 'Coordinators',
     image: nishant,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -230,6 +251,7 @@ const teamMembers: TeamMember[] = [
     image: skj,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -240,6 +262,7 @@ const teamMembers: TeamMember[] = [
     image: nalin,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/nalin-khanna-877a99246/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -250,15 +273,18 @@ const teamMembers: TeamMember[] = [
     image: aditya,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/adityarwt/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
     id: '23',
     name: 'Siddharta',
+    role: '',
     category: 'Coordinators',
     image: sid,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -269,15 +295,18 @@ const teamMembers: TeamMember[] = [
     image: dhruv,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
     id: '25',
     name: 'Himanshu Vishwakarma',
+    role: '',
     category: 'Coordinators',
     image: himanshu,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/himanshu-vishwakarma-a3766a258/',
+      gmail: 'https://www.gmail.com/',
     },
   },
   {
@@ -288,6 +317,7 @@ const teamMembers: TeamMember[] = [
     image: sanchit,
     socialLinks: {
       linkedin: '#',
+      gmail: 'https://www.gmail.com/',
     },
   },
 ];
@@ -318,11 +348,10 @@ const Team: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full ${
-                selectedCategory === category
-                  ? 'bg-primary-500 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700'
-              }`}
+              className={`px-6 py-2 rounded-full ${selectedCategory === category
+                ? 'bg-primary-500 text-white'
+                : 'bg-gray-200 dark:bg-gray-700'
+                }`}
             >
               {category}
             </motion.button>
@@ -356,7 +385,16 @@ const Team: React.FC = () => {
                     <div className="flex gap-4">
                       {member.socialLinks.linkedin && (
                         <a href={member.socialLinks.linkedin} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
-                          <Linkedin className="w-5 h-5" />
+                          <div className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center">
+                            <Linkedin className="w-4 h-4 text-white" />
+                          </div>
+                        </a>
+                      )}
+                      {member.socialLinks.gmail && (
+                        <a href={member.socialLinks.gmail} className="text-gray-600 dark:text-gray-300 hover:text-primary-500">
+                          <div className="w-8 h-8 rounded-full bg-red-700 flex items-center justify-center">
+                            <Mail className="w-4 h-4 text-white" />
+                          </div>
                         </a>
                       )}
                     </div>
