@@ -21,15 +21,20 @@ const Navigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-50 bg-white/70 dark:bg-gray-900/80 backdrop-blur-lg">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src="/utils/edc_logo.png"
+                alt="EDC Logo"
+                className="h-8 w-8 rounded-full mr-2 object-cover hover:scale-110 transition-transform duration-200"
+              />
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-2xl font-bold text-indigo-600 dark:text-indigo-400"
+                className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:scale-110 transition-transform duration-200"
               >
                 EDC
               </motion.div>
