@@ -24,8 +24,9 @@ const Resources: React.FC = () => {
         >
           <h1 className="text-5xl font-bold mb-6">Resources</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Access our curated collection of entrepreneurial resources
+            Access our curated collection of entrepreneurial resources.
           </p>
+          <p className='mt-3 text-xl text-gray-600 dark:text-gray-300 '> <a href='https://chat.whatsapp.com/IQEkvhvfBkG8Zv8XiTvGlk' className='text-primary-500 hover:scale-150 transition-transform duration-200'>Join Our Community</a> for more opportunities and resources.</p>
         </motion.div>
 
         <motion.div
