@@ -21,11 +21,13 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
+  category: string;
   image: string;
   socialLinks: {
     linkedin?: string;
     twitter?: string;
     github?: string;
+    gmail?: string;
   };
 }
 
