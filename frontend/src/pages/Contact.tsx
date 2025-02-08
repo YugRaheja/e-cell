@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission
-    console.log('Form submitted:', formData);
+    try {
+      const response = await axios.post("http://localhost:3000/contact", formData);
+      toast.success('Message sent successfully!');
+      // Clear the form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch(error) {
+      toast.error('Failed to send message. Please try again.');
+      console.log(error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,6 +37,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <Toaster position="top-center" />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
