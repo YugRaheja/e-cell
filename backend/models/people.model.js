@@ -1,16 +1,10 @@
 const mongoose = require("mongoose");
 const PeopleSchema = mongoose.Schema(
     {
-        name : {type:String,
-            required : [true , "Please enter your name"], 
-         }, 
-        email : {type:String,
-            required : [true , "Please enter your email"]
-        } , 
+        name : String , 
+        email : String , 
         subject : String , 
-        message : {
-            type : String , 
-        },
+        message : String ,
     },
     {timeStamps: true }
 )
