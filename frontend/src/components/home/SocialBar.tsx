@@ -4,7 +4,7 @@ import { faLinkedin, faInstagram, faYoutube, faWhatsapp, faTwitter } from "@fort
 
 const SocialBar: React.FC = () => {
   return (
-    <div className="absolute left-2 top-[45vh] flex flex-col items-center space-y-4 z-50">
+    <div className="absolute left-2 top-[40vh] flex flex-col items-center space-y-4 z-50">
       {/* Dot + Vertical Line */}
       <div className="flex flex-col items-center">
         <div className="w-3 h-3 bg-gray-600 dark:bg-gray-300 rounded-full mb-1"></div> {/* Small Dot */}
