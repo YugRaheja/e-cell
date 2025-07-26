@@ -3,23 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Linkedin, Mail, Github } from 'lucide-react';
 import type { TeamMember } from '../types';
 //core pics
-import ayush from '../pics/Ayush.png'
-import jiya from '../pics/Jiya.png'
-import akshat from '../pics/akshat.png'
-import anushka from '../pics/anushka d.png'
-import anurag from '../pics/anurag.png'
-import harprabh from '../pics/harprabh.png'
-import harshit from '../pics/harshit.png'
-import kartik from '../pics/kartik b.png'
-import rishab from '../pics/rishab.png'
-import vansh from '../pics/vansh.png'
-import varun from '../pics/varun.png'
-import aakash from '../pics/Aakash.png'
+import aashi from '../pics/aashi.jpg'
+import anshika from '../pics/anshika.jpg'
+import sneha from '../pics/sneha.jpg'
+import yug from '../pics/yug.jpg'
+import vishrut from '../pics/vishrut.jpg'
+import shivansh from '../pics/shivansh.jpg'
+import pushkar from '../pics/pushkar.jpg'
+import aryan from '../pics/aryan.jpg'
 //coordinators pics
 import dhruv from '../pics/dhruv bb.jpg'
 import ansh from '../pics/ansh.png'
 import priya from '../pics/priya.png'
-import skj from '../pics/shivam b.jpg'
+import skj from '../pics/skj.png'
 import nalin from '../pics/nalin b.jpg'
 import manas from '../pics/manas.png'
 import sid from '../pics/siddharta.png'
@@ -30,8 +26,9 @@ import sarthak from '../pics/sarthak.png'
 import nishant from '../pics/nishant.png'
 import arnav from '../pics/arnav.png'
 import aditya from '../pics/aditya.png'
+import sujal from '../pics/sujal.jpg'
+import hitesh from '../pics/hitesh.jpg'
 
-// Update the TeamMember type definition
 type TeamMember = {
   id: string;
   name: string;
@@ -40,7 +37,7 @@ type TeamMember = {
   image: string;
   socialLinks: {
     linkedin?: string;
-    email?: string;
+    // email?: string;
     github?: string;
   };
 };
@@ -48,288 +45,272 @@ type TeamMember = {
 const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Ayush Narayan Kamal',
+    name: 'Sarthak Jain',
     role: 'President',
     category: 'Core Team',
-    image: ayush,
+    image: sarthak,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/ayush-narayan-kamal-62b094229/',
-      email: 'ayush.kamal@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/sarthak-jain2902/',
+      // email: 'sarthak.jain@ecellmait.com',
     },
   },
   {
     id: '2',
-    name: 'Jiya Verma',
+    name: 'Manas Ishwar',
     role: 'Vice President',
     category: 'Core Team',
-    image: jiya,
+    image: manas,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/jiyaverma/',
-      email: 'Jiyaverma3101@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/manas-ishwar-910078303/',
+      // email: 'manas.ishwar@ecellmait.com',
     },
   },
   {
     id: '3',
-    name: 'Akshat Jindal',
+    name: 'Ansh Kapila',
     role: 'General Secretary',
     category: 'Core Team',
-    image: akshat,
+    image: ansh,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/akshat-jindal-4285b1208/',
-      email: 'akshatjindal521@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/anshkapila/',
+      // email: 'ansh.kapila@ecellnsut.com',
     },
   },
   {
     id: '4',
-    name: 'Anushka Dubey',
-    role: 'Treasurer',
+    name: 'Dhruv Anand ',
+    role: 'Joint Secretary',
     category: 'Core Team',
-    image: anushka,
+    image: dhruv,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/anushka-dubey-0b9817231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      email: 'workanushka1@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/dhruv-anand-3595912a7/',
+      // email: 'dhruv30.here@gmail.com',
     },
   },
   {
     id: '5',
-    name: 'Varun Punia',
-    role: 'Core Team Lead',
+    name: 'Priya Talreja',
+    role: 'Treasurer',
     category: 'Core Team',
-    image: varun,
+    image: priya,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/varun-punia-068841229/',
-      email: 'varunpunia009@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/priya-talreja-a325b5249/',
+      // email: 'priya.talreja@ecellmait.com',
     },
   },
   {
     id: '6',
-    name: 'Rishabh',
-    role: 'Event Head',
-    category: 'Core Team',
-    image: rishab,
-    socialLinks: {
-      linkedin: 'http://www.linkedin.com/in/choudhary-rishabh',
-      email: 'choudharyrishabh1110@gmail.com',
-    },
-  },
-  {
-    id: '7',
-    name: 'Harprabh Singh',
-    role: 'Logistic Head',
-    category: 'Core Team',
-    image: harprabh,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/harprabh-singh-42a9a5225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      email: 'official.harprabhsingh@gmail.com',
-    },
-  },
-  {
-    id: '8',
-    name: 'Aakash',
-    role: 'Logistic Head',
-    category: 'Core Team',
-    image: aakash,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/aakash-gandhi-a47a6421b/',
-      email: 'aakash@ecellnsut.com',
-    },
-  },
-  {
-    id: '9',
-    name: 'Vansh',
-    role: 'Logistic Head',
-    category: 'Core Team',
-    image: vansh,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/vansh-kalra-66182b1b0/',
-      email: 'vansh@ecellnsut.com',
-    },
-  },
-  {
-    id: '10',
-    name: 'Harshit',
-    role: 'Content Head',
-    category: 'Core Team',
-    image: harshit,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/harshit-jain-6b01a0212',
-      email: 'harshitjain5670@gmail.com',
-    },
-  },
-  {
-    id: '11',
-    name: 'Anurag Sahani',
-    role: 'Creative Head',
-    category: 'Core Team',
-    image: anurag,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/anurag-sahani-145b03232/',
-      email: 'anurag.sahani@ecellnsut.com',
-    },
-  },
-  {
-    id: '12',
-    name: 'Kartik Suri',
-    role: 'PR Head',
-    category: 'Core Team',
-    image: kartik,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/kartik-suri-831152221',
-      email: 'kartiksuri682002@gmail.com',
-    },
-  },
-  {
-    id: '13',
-    name: 'Dhruv Anand',
-    role: 'Event',
-    category: 'Coordinators',
-    image: dhruv,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/dhruv-anand-3595912a7/',
-      email: 'dhruv30.here@gmail.com',
-    },
-  },
-  {
-    id: '20',
-    name: 'Shivam Kumar Jha (SKJ)',
-    role: 'Research and Development',
-    category: 'Coordinators',
-    image: skj,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/shivam-kumar-jha-35686a238/',
-      email: '2004skj@gmail.com',
-      github: 'https://github.com/Shivoo29',
-    },
-  },
-  {
-    id: '15',
-    name: 'Priya Talreja',
-    role: 'Graphics Lead',
-    category: 'Coordinators',
-    image: priya,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/priya-talreja-a325b5249/',
-      email: 'priya.talreja@ecellnsut.com',
-    },
-  },
-  {
-    id: '16',
-    name: 'Manas Ishwar',
-    role: 'Content Lead',
-    category: 'Coordinators',
-    image: manas,
-    socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/manas-ishwar-910078303/',
-      email: 'manas.ishwar@ecellnsut.com',
-    },
-  },
-  {
-    id: '17',
     name: 'Nalin Khanna',
-    role: 'Research and Development',
-    category: 'Coordinators',
+    role: 'Core Team Lead',
+    category: 'Core Team',
     image: nalin,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/nalin-khanna-877a99246/',
-      email: 'nalin@ecellnsut.com',
+      // email: 'nalin@ecellmait.com',
       github: 'https://github.com/Nalin-khanna',
     },
   },
   {
-    id: '21',
-    name: 'Shubhashish Panda',
-    role: 'Grapics',
-    category: 'Coordinators',
+    id: '7',
+    name: 'Shivam Kumar Jha',
+    role: 'Logistic Head',
+    category: 'Core Team',
+    image: skj,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/shivam-kumar-jha-35686a238/',
+      // email: '2004skj@gmail.com',
+      github: 'https://github.com/Shivoo29',
+    },
+  },
+  {
+    id: '8',
+    name: 'Sujal',
+    role: 'Logistic Head',
+    category: 'Core Team',
+    image: sujal,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/chauhansujal/',
+      // email: 'aakash@ecellmait.com',
+    },
+  },
+  {
+    id: '9',
+    name: 'Aditya Rawat',
+    role: 'R&D Head',
+    category: 'Core Team',
+    image: aditya,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/adityarwt/',
+      // email: 'aditya.rawat@ecellmait.com',
+    },
+  },
+  {
+    id: '9',
+    name: 'Arnav Pathak',
+    role: 'R&D Head',
+    category: 'Core Team',
+    image: arnav,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/profile-of-arnav-pathak/',
+      // email: 'arnav.pathak@ecellmait.com',
+    },
+  },
+  {
+    id: '10',
+    name: 'Siddharth',
+    role: 'Content Head',
+    category: 'Core Team',
+    image: sid,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/siddhartha-sharma-039895298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'siddharta@ecellmait.com',
+    },
+  },
+  {
+    id: '11',
+    name: 'Subhashish Panda',
+    role: 'Creative Head',
+    category: 'Core Team',
     image: shubhashish,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/subhasishpanda25/',
-      email: 'shubhashish.panda@ecellnsut.com',
+      // email: 'shubhashish.panda@ecellmait.com',
     },
   },
   {
-    id: '24',
-    name: 'Sarthak Jain',
-    role: 'Event Lead',
-    category: 'Coordinators',
-    image: sarthak,
+    id: '11',
+    name: 'himanshu Vishwakarma',
+    role: 'Creative Head',
+    category: 'Core Team',
+    image: himanshu,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/sarthak-jain2902/',
-      email: 'sarthak.jain@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/himanshu-vishwakarma-a3766a258/',
+      // email: 'himanshu.vishwakarma@ecellmait.com',
     },
   },
   {
-    id: '14',
-    name: 'Ansh Kapila',
-    role: 'Graphics Lead',
-    category: 'Coordinators',
-    image: ansh,
+    id: '12',
+    name: 'Hitesh Gaur',
+    role: 'PR Head',
+    category: 'Core Team',
+    image: hitesh,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/anshkapila/',
-      email: 'ansh.kapila@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/hitesh-gaur-159240258/',
+      // email: 'kartiksuri682002@gmail.com',
+    },
+  },
+  {
+    id: '12',
+    name: 'Sanchit Kumar',
+    role: 'PR Head',
+    category: 'Core Team',
+    image: sanchit,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/sanchit-kumar-419132350/',
+      // email: 'sanchit@ecellmait.com',
+    },
+  },
+  {
+    id: '12',
+    name: 'Nishant Rao',
+    role: 'PR Head',
+    category: 'Core Team',
+    image: nishant,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/nishant-rao-98a34a258/',
+      // email: 'nishant.rao@ecellmait.com',
+    },
+  },
+  {
+    id: '16',
+    name: 'Yug Raheja',
+    role: 'Research & Development Lead',
+    category: 'Coordinators',
+    image: yug,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/yug-raheja/',
+      // email: 'manas.ishwar@ecellmait.com',
+    },
+  },
+  {
+    id: '21',
+    name: 'Sneha Sharma',
+    role: 'Research & Development Lead',
+    category: 'Coordinators',
+    image: sneha,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/sneha-sharma-59183b320/',
+      // email: 'shubhashish.panda@ecellmait.com',
     },
   },
   {
     id: '18',
-    name: 'Arnav Pathak',
+    name: 'Vishrut Gupta',
+    role: 'Outreach Lead',
     category: 'Coordinators',
-    image: arnav,
+    image: vishrut,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/profile-of-arnav-pathak/',
-      email: 'arnav.pathak@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/vishrut-gupta-3026a2232',
+      // email: 'arnav.pathak@ecellmait.com',
     },
   },
   {
-    id: '22',
-    name: 'Aditya Rawat',
-    role: 'Event',
+    id: '14',
+    name: 'Ramit',
+    role: 'Event Lead',
     category: 'Coordinators',
-    image: aditya,
+    image: anshika,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/adityarwt/',
-      email: 'aditya.rawat@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/anshika-chaubey-76b40a254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'ansh.kapila@ecellmait.com',
     },
   },
   {
-    id: '23',
-    name: 'Siddharta',
-    role: '',
+    id: '13',
+    name: 'Shivansh Sharma',
+    role: 'Operation Lead',
     category: 'Coordinators',
-    image: sid,
+    image: shivansh,
     socialLinks: {
-      linkedin: '#',
-      email: 'siddharta@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/shivanshsharma355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'dhruv30.here@gmail.com',
+    },
+  },
+  
+  {
+    id: '20',
+    name: 'Aashi Jain',
+    role: 'Graphics Lead',
+    category: 'Coordinators',
+    image: aashi,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/aashi-jain-474b3529a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: '2004skj@gmail.com',
+      // github: 'https://github.com/Shivoo29',
     },
   },
   {
-    id: '19',
-    name: 'Nishant Rao',
+    id: '24',
+    name: 'Pushkar Taneja',
+    role: 'Graphic Lead',
     category: 'Coordinators',
-    image: nishant,
+    image: pushkar,
     socialLinks: {
-      linkedin: '#',
-      email: 'nishant.rao@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/pushkar-taneja?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'sarthak.jain@ecellmait.com',
     },
   },
+  
   {
-    id: '25',
-    name: 'Himanshu Vishwakarma',
-    role: '',
+    id: '17',
+    name: 'Aryan Kumar',
+    role: 'Content Lead',
     category: 'Coordinators',
-    image: himanshu,
+    image: aryan,
     socialLinks: {
-      linkedin: 'https://www.linkedin.com/in/himanshu-vishwakarma-a3766a258/',
-      email: 'himanshu.vishwakarma@ecellnsut.com',
-    },
-  },
-  {
-    id: '26',
-    name: 'Sanchit',
-    role: 'Content',
-    category: 'Coordinators',
-    image: sanchit,
-    socialLinks: {
-      linkedin: '#',
-      email: 'sanchit@ecellnsut.com',
+      linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'nalin@ecellmait.com',
+      github: 'https://github.com/Nalin-khanna',
     },
   },
 ];
@@ -387,11 +368,11 @@ const Team: React.FC = () => {
                           <Linkedin className="w-5 h-5" />
                         </a>
                       )}
-                      {member.socialLinks.email && (
+                      {/* {member.socialLinks.email && (
                         <a href={`mailto:${member.socialLinks.email}`} className="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
                           <Mail className="w-5 h-5" />
                         </a>
-                      )}
+                      )} */}
                       {member.socialLinks.github && (
                         <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-gray-700 transition-colors">
                           <Github className="w-5 h-5" />

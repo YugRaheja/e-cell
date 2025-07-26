@@ -4,13 +4,11 @@ import { faLinkedin, faInstagram, faYoutube, faWhatsapp, faTwitter } from "@fort
 
 const SocialBar: React.FC = () => {
   return (
-    <div className="absolute left-2 top-[40vh] flex flex-col items-center space-y-4 z-50">
-      {/* Dot + Vertical Line */}
+    <div className="absolute left-2 top-[50vh] flex flex-col items-center space-y-4 z-50">
       <div className="flex flex-col items-center">
-        <div className="w-3 h-3 bg-gray-600 dark:bg-gray-300 rounded-full mb-1"></div> {/* Small Dot */}
-        <div className="w-[2px] h-20 bg-gray-600 dark:bg-gray-300"></div> {/* Vertical Line */}
+        <div className="w-3 h-3 bg-gray-600 dark:bg-gray-300 rounded-full mb-1"></div>
+        <div className="w-[2px] h-20 bg-gray-600 dark:bg-gray-300"></div>
       </div>
-      {/* Social Media Icons - Dark in Light Mode, White in Dark Mode */}
       <a href="https://www.linkedin.com/company/edcmait/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} className="text-gray-800 dark:text-white text-3xl hover:text-blue-600 transition duration-300" />
       </a>

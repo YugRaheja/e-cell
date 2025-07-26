@@ -1,9 +1,9 @@
 import React from 'react';
 import ParticlesBackground from '../components/shared/ParticlesBackground';
 import HeroSection from '../components/home/HeroSection';
-import StatsSection from '../components/home/StatsSection';
-import FeaturedStartups from '../components/home/FeaturedStartups';
-import NewsletterSection from '../components/home/NewsletterSection';
+import Aboutedc from '../components/home/Aoubtedc';
+import EventGrid from '../components/home/EventGrid';
+import Footer from '../components/home/Footer';
 import SocialBar from '../components/home/SocialBar';
 
 const Home: React.FC = () => {
@@ -14,9 +14,9 @@ const Home: React.FC = () => {
       </div>
       <div className="relative z-10">
         <HeroSection />
-        <StatsSection />
-        <FeaturedStartups />
-        <NewsletterSection />
+        <Aboutedc />
+        <EventGrid />
+        <Footer />
         <SocialBar />
       </div>
     </div>

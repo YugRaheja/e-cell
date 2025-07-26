@@ -5,6 +5,57 @@ import type { BlogPost } from '../types';
 const blogPosts: BlogPost[] = [
   {
     id: '1',
+    title: 'The Rise of Korean Skincare: A Global Beauty Phenomenon',
+    excerpt: ' ~Sneha Dewan',
+    content: '',
+    author: {
+      name: '',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80',
+    },
+    date: '2024-03-01',
+    category: 'Startup Tips',
+    readTime: 5,
+    image: '/utils/korean_beauty.png',
+    websiteUrl: '/utils/koreanBeauty.pdf',
+
+    
+  },
+  {
+    id: '1',
+    title: 'The Transformative Power of Your 20s: A Life-Defining Decade',
+    excerpt: '\n ~Apoorva Gupta',
+    content: '',
+    author: {
+      name: '',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80',
+    },
+    date: '2024-03-01',
+    category: 'Startup Tips',
+    readTime: 5,
+    image: '/utils/redefiningimg.jpg',
+    websiteUrl: '/utils/redefining20.pdf',
+
+    
+  },
+  {
+    id: '1',
+    title: 'The Return of the Artisan: Handmade, AI-Assisted, and Global',
+    excerpt: ' ~Riya Yadav',
+    content: '',
+    author: {
+      name: '',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80',
+    },
+    date: '2024-03-01',
+    category: 'Startup Tips',
+    readTime: 5,
+    image: '/utils/return.jpg',
+    websiteUrl: '/utils/earth.pdf',
+
+    
+  },
+  {
+    id: '1',
     title: '30 Best Pieces of Advice for Entrepreneurs',
     excerpt: 'Expert Advice to Elevate Your Entrepreneurial Journey and Achieve Success',
     content: '',
@@ -73,7 +124,7 @@ const Blog: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-6">Blog</h1>
+          <h1 className="text-5xl font-bold mb-6">Blogs</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Insights and stories from the entrepreneurial world
           </p>
@@ -102,7 +153,7 @@ const Blog: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-3">{post.title}</h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 mb-2">
                     {post.excerpt}
                   </p>
                   <motion.a
