@@ -5,10 +5,18 @@ import { FileText, Link as LinkIcon } from 'lucide-react';
 const resources = [
   {
     id: 1,
-    title: 'Startup Guide 2024',
-    description: 'Comprehensive guide for starting your entrepreneurial journey',
+    title: 'FIGMA IPO',
+    // description: 'Comprehensive guide for starting your entrepreneurial journey',
     type: 'pdf',
-    link: '/utils/suits_MindMaze.pdf.pdf',
+    link: '/utils/figma.pdf',
+    category: 'Guides'
+  },
+  {
+    id: 2,
+    title: 'LABUBU RESEARCH',
+    // description: 'Comprehensive guide for starting your entrepreneurial journey',
+    type: 'pdf',
+    link: '/utils/labubu.pdf',
     category: 'Guides'
   }
 ];
