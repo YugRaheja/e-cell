@@ -29,6 +29,14 @@ import aditya from '../pics/aditya.png'
 import sujal from '../pics/sujal.jpg'
 import hitesh from '../pics/hitesh.jpg'
 
+//mentors pics
+import nitin from '../pics/nitin.png'
+import vaibhav from '../pics/vaibhav.png'
+import bhaskar from '../pics/bhaskar.png'
+import sukhvinder from '../pics/sukhvinder.png'
+import vinay from '../pics/vinay.jpg'
+import blank from '../pics/blank.webp'
+
 type TeamMember = {
   id: string;
   name: string;
@@ -41,6 +49,8 @@ type TeamMember = {
     github?: string;
   };
 };
+
+
 
 const teamMembers: TeamMember[] = [
   {
@@ -313,11 +323,144 @@ const teamMembers: TeamMember[] = [
       github: 'https://github.com/Nalin-khanna',
     },
   },
+
+  {
+    id: '31',
+    name: 'Dr. Vinay Kumar Saini',
+    role: 'Convener',
+    category: 'Mentors',
+    image: vinay,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/vinaykumarsaini?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  
+
+  {
+    id: '33',
+    name: 'Dr. Bhaskar Kapoor',
+    role: 'Member',
+    category: 'Mentors',
+    image: blank,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/dr-bhaskar-kapoor-6b4b7819/',
+      // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  {
+    id: '34',
+    name: 'Dr. Deshdeep Gambhir',
+    role: 'Member',
+    category: 'Mentors',
+    image: blank,
+    socialLinks: {
+      // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  {
+    id: '35',
+    name: 'Dr. Siddharth',
+    role: 'Member',
+    category: 'Mentors',
+    image: blank,
+    socialLinks: {
+      // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  {
+    id: '36',
+    name: 'Mr.Vaibhav Nijhawan',
+    role: 'Member',
+    category: 'Mentors',
+    image: black,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/vaibhav-nijhawan-20941021/',
+      // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  {
+    id: '37',
+    name: 'Mr.Rohit Lakhane',
+    role: 'Member',
+    category: 'Mentors',
+    image: aryan,
+    socialLinks: {
+      // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+   {
+    id: '38',
+    name: 'Dr.Sukhvinder Singh',
+    role: 'Member',
+    category: 'Mentors',
+    image: sukhvinder,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/dr-sukhvinder-singh-9098039b',    
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+   {
+    id: '39',
+    name: 'Dr. Nitin Garg',
+    role: 'Member',
+    category: 'Mentors',
+    image: nitin,
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/nitin-garg-3a847644/recent-activity/all/',
+      // email: 'nalin@ecellmait.com',
+      // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+   {
+    id: '40',
+    name: 'Mr.Ajay Tiwari',
+    role: 'Member',
+    category: 'Mentors',
+    image: aryan,
+    socialLinks: {
+      // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // // email: 'nalin@ecellmait.com',
+      // // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+   {
+    id: '41',
+    name: 'Dr.Shashi Kant Pandey',
+    role: 'Member',
+    category: 'Mentors',
+    image: aryan,
+    socialLinks: {
+      // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      // // email: 'nalin@ecellmait.com',
+      // // github: 'https://github.com/Nalin-khanna',
+    },
+  },
+
+  
 ];
 
 
 
-const categories = ['Core Team', 'Coordinators'];
+const categories = ['Core Team', 'Mentors', 'Coordinators'];
 
 const Team: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('Core Team');
@@ -357,7 +500,8 @@ const Team: React.FC = () => {
             {teamMembers
               .filter((member) => member.category === selectedCategory)
               .map((member) => (
-                <motion.div key={member.id} whileHover={{ y: -10 }} className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+            
+           <motion.div key={member.id} whileHover={{ y: -10 }} className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                   <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
                   <div className="p-6">
                     <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
