@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Linkedin, Mail, Github } from 'lucide-react';
-import type { TeamMember } from '../types';
+// import type { TeamMember } from '../types';
 //core pics
 import aashi from '../pics/aashi.jpg'
-import anshika from '../pics/anshika.jpg'
+import ramit from '../pics/ramit.jpg'
 import sneha from '../pics/sneha.jpg'
 import yug from '../pics/yug.jpg'
 import vishrut from '../pics/vishrut.jpg'
@@ -13,16 +13,16 @@ import pushkar from '../pics/pushkar.jpg'
 import aryan from '../pics/aryan.jpg'
 //coordinators pics
 import dhruv from '../pics/dhruv bb.jpg'
-import ansh from '../pics/ansh.png'
+import ansh from '../pics/ansh.jpg'
 import priya from '../pics/priya.png'
 import skj from '../pics/skj.png'
 import nalin from '../pics/nalin b.jpg'
-import manas from '../pics/manas.png'
+import manas from '../pics/manas.jpg'
 import sid from '../pics/siddharta.png'
 import himanshu from '../pics/himanshu.png'
 import sanchit from '../pics/sanchit.png'
 import shubhashish from '../pics/Shubhashish.png'
-import sarthak from '../pics/sarthak.png'
+import sarthak from '../pics/sarthak.jpg'
 import nishant from '../pics/nishant.png'
 import arnav from '../pics/arnav.png'
 import aditya from '../pics/aditya.png'
@@ -259,7 +259,7 @@ const teamMembers: TeamMember[] = [
     name: 'Ramit',
     role: 'Event Lead',
     category: 'Coordinators',
-    image: anshika,
+    image: ramit,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/anshika-chaubey-76b40a254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       // email: 'ansh.kapila@ecellmait.com',

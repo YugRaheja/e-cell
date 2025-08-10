@@ -54,9 +54,9 @@ const Resources: React.FC = () => {
                   <FileText className="w-8 h-8 text-primary-500 mr-3" />
                   <h3 className="text-2xl font-bold">{resource.title}</h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {/* <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {resource.description}
-                </p>
+                </p> */}
                 <div className="flex items-center justify-between">
                   <span className="text-primary-500">
                     Access Resource
