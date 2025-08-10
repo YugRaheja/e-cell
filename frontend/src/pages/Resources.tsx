@@ -5,7 +5,7 @@ import { FileText, Link as LinkIcon } from 'lucide-react';
 const resources = [
   {
     id: 1,
-    title: 'FIGMA IPO',
+    title: 'From Startup to Stock Market: The Figma IPO Case Study',
     // description: 'Comprehensive guide for starting your entrepreneurial journey',
     type: 'pdf',
     link: '/utils/figma.pdf',
@@ -13,7 +13,7 @@ const resources = [
   },
   {
     id: 2,
-    title: 'LABUBU RESEARCH',
+    title: 'Labubu: Character Study and Market Influence',
     // description: 'Comprehensive guide for starting your entrepreneurial journey',
     type: 'pdf',
     link: '/utils/labubu.pdf',

@@ -329,7 +329,7 @@ const teamMembers: TeamMember[] = [
     name: 'Dr. Vinay Kumar Saini',
     role: 'Convener',
     category: 'Mentors',
-    image: vinay,
+    image: blank,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/vinaykumarsaini?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       // email: 'nalin@ecellmait.com',
@@ -383,7 +383,7 @@ const teamMembers: TeamMember[] = [
     name: 'Mr.Vaibhav Nijhawan',
     role: 'Member',
     category: 'Mentors',
-    image: black,
+    image: blank,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/vaibhav-nijhawan-20941021/',
       // email: 'nalin@ecellmait.com',
@@ -396,7 +396,7 @@ const teamMembers: TeamMember[] = [
     name: 'Mr.Rohit Lakhane',
     role: 'Member',
     category: 'Mentors',
-    image: aryan,
+    image: blank,
     socialLinks: {
       // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       // // email: 'nalin@ecellmait.com',
@@ -409,7 +409,7 @@ const teamMembers: TeamMember[] = [
     name: 'Dr.Sukhvinder Singh',
     role: 'Member',
     category: 'Mentors',
-    image: sukhvinder,
+    image: blank,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/dr-sukhvinder-singh-9098039b',    
       // github: 'https://github.com/Nalin-khanna',
@@ -421,7 +421,7 @@ const teamMembers: TeamMember[] = [
     name: 'Dr. Nitin Garg',
     role: 'Member',
     category: 'Mentors',
-    image: nitin,
+    image: blank,
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/nitin-garg-3a847644/recent-activity/all/',
       // email: 'nalin@ecellmait.com',
@@ -434,7 +434,7 @@ const teamMembers: TeamMember[] = [
     name: 'Mr.Ajay Tiwari',
     role: 'Member',
     category: 'Mentors',
-    image: aryan,
+    image: blank,
     socialLinks: {
       // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       // // email: 'nalin@ecellmait.com',
@@ -447,7 +447,7 @@ const teamMembers: TeamMember[] = [
     name: 'Dr.Shashi Kant Pandey',
     role: 'Member',
     category: 'Mentors',
-    image: aryan,
+    image: blank,
     socialLinks: {
       // linkedin: 'https://www.linkedin.com/in/aryan-kumar-650044250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       // // email: 'nalin@ecellmait.com',

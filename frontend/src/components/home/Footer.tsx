@@ -23,17 +23,17 @@ const contributors = [
   {
     name: "Ashish Negi",
     linkedin: "https://www.linkedin.com/in/ashish-negi-6754181a0/",
-    github: "https://github.com/contributor3",
+    github: "https://github.com/05Ashish",
   },
   {
     name: "Yug Raheja",
     linkedin: "https://www.linkedin.com/in/yug-raheja/",
-    github: "https://github.com/contributor4",
+    github: "https://github.com/YugRaheja",
   },
   {
     name: "Aashi Jain",
     linkedin: "https://www.linkedin.com/in/aashi-jain-474b3529a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    github: "https://github.com/contributor5",
+    github: "https://github.com/aashijain03",
   },
   {
     name: "Sneha Sharma",
@@ -43,12 +43,12 @@ const contributors = [
   {
     name: "Vaibhav Jain",
     linkedin: "https://www.linkedin.com/in/jainvaibhav26/",
-    github: "https://github.com/contributor7",
+    github: "https://github.com/vaibhavj22-05",
   },
   {
     name: "Kareena Grover",
     linkedin: "https://www.linkedin.com/in/kareena-grover-04860b32a/",
-    github: "https://github.com/contributor8",
+    github: "https://github.com/Kareena-3",
   },
 ];
 
