@@ -4,109 +4,114 @@ import {
   faLinkedin,
   faInstagram,
   faYoutube,
-  faWhatsapp,
-  faTwitter,
+  faFacebook,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons"; // X (Twitter) icon
+
+const contributors = [
+  {
+    name: "Shivam KumarJha ",
+    linkedin: "https://www.linkedin.com/in/shivam-kumar-jha-35686a238/",
+    github: "https://github.com/Shivoo29",
+  },
+  {
+    name: "Nalin Kumar",
+    linkedin: "https://www.linkedin.com/in/nalin-khanna-877a99246/",
+    github: "https://github.com/Nalin-khanna",
+  },
+  {
+    name: "Ashish Negi",
+    linkedin: "https://www.linkedin.com/in/ashish-negi-6754181a0/",
+    github: "https://github.com/05Ashish",
+  },
+  {
+    name: "Yug Raheja",
+    linkedin: "https://www.linkedin.com/in/yug-raheja/",
+    github: "https://github.com/YugRaheja",
+  },
+  {
+    name: "Aashi Jain",
+    linkedin: "https://www.linkedin.com/in/aashi-jain-474b3529a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    github: "https://github.com/aashijain03",
+  },
+  {
+    name: "Sneha Sharma",
+    linkedin: "https://www.linkedin.com/in/sneha-sharma-59183b320/",
+    github: "https://github.com/contributor6",
+  },
+  {
+    name: "Vaibhav Jain",
+    linkedin: "https://www.linkedin.com/in/jainvaibhav26/",
+    github: "https://github.com/vaibhavj22-05",
+  },
+  {
+    name: "Kareena Grover",
+    linkedin: "https://www.linkedin.com/in/kareena-grover-04860b32a/",
+    github: "https://github.com/Kareena-3",
+  },
+];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1e1b4b] text-white px-6 md:px-20 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-8">
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <p>MAIT, ED Cell</p>
-          <p>Delhi, India</p>
-          <p>
-            Email:{" "}
-            <a
-              href="mailto:edc@mait.ac.in"
-              className="hover:text-indigo-300 underline"
-            >
-              edc@mait.ac.in
-            </a>
-          </p>
-        </div>
+    <footer className="bg-[#1e1b4b] text-white text-center py-10">
+      <h2 className="text-xl font-semibold mb-4">
+        Entrepreneurship Development Cell MAIT
+      </h2>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/about" className="hover:text-indigo-300 transition">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/events" className="hover:text-indigo-300 transition">
-                Events
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="hover:text-indigo-300 transition">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+      <p className="text-sm text-gray-400 mb-4">
+        © {new Date().getFullYear()} Entrepreneurship Development Cell MAIT. All rights reserved.
+      </p>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-          <div className="flex space-x-4">
-            <a
-              href="https://www.linkedin.com/company/edcmait/"
-              target="_blank"
-              rel="EDC Linkedin"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="text-white hover:text-blue-500 text-2xl transition"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/edcell.mait/"
-              target="_blank"
-              rel="EDC Instagram"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-white hover:text-pink-500 text-2xl transition"
-              />
-            </a>
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="EDC Youtube"
-            >
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="text-white hover:text-red-600 text-2xl transition"
-              />
-            </a>
-            <a
-              href="https://chat.whatsapp.com/Hj9nvbZKece10kf0RyfbmX"
-              target="_blank"
-              rel="EDC Whatsapp Community"
-            >
-              <FontAwesomeIcon
-                icon={faWhatsapp}
-                className="text-white hover:text-green-500 text-2xl transition"
-              />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="EDC Twitter"
-            >
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="text-white hover:text-blue-400 text-2xl transition"
-              />
-            </a>
-          </div>
-        </div>
+      <div className="flex justify-center space-x-5 mb-6">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-blue-500 transition" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} className="text-xl hover:text-pink-500 transition" />
+        </a>
+        <a href="https://www.linkedin.com/company/edcmait/" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faLinkedin} className="text-xl hover:text-blue-400 transition" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faXTwitter} className="text-xl hover:text-gray-300 transition" />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-red-500 transition" />
+        </a>
       </div>
 
-      <div className="text-center text-sm text-gray-400 pt-6">
-        © 2025 Entrepreneurship Devlopment Cell MAIT. All rights reserved.
+      <div className="mt-6">
+        <h3 className="text-lg font-medium mb-4">Contributors</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {contributors.map((contributor, index) => (
+            <div key={index} className="text-center">
+              <p className="text-white font-medium">{contributor.name}</p>
+              <div className="flex justify-center space-x-3 mt-2">
+                <a
+                  href={contributor.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    className="text-lg hover:text-blue-400 transition"
+                  />
+                </a>
+                <a
+                  href={contributor.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="text-lg hover:text-gray-300 transition"
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </footer>
   );

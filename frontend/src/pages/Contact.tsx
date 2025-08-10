@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
@@ -163,6 +163,57 @@ const Contact: React.FC = () => {
             </form>
           </motion.div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact; */
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin } from 'lucide-react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center py-20">
+      <div className="container mx-auto px-4 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-12 max-w-xl w-full"
+        >
+          <h2 className="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+          <div className="space-y-8">
+            <div className="flex items-start">
+              <Mail className="w-7 h-7 text-primary-500 mr-4 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg mb-1">Email</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-lg">
+                  edcell.mait@gmail.com
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <Phone className="w-7 h-7 text-primary-500 mr-4 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg mb-1">Phone</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-lg">
+                  +91 9350806451
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <MapPin className="w-7 h-7 text-primary-500 mr-4 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg mb-1">Location</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-lg">
+                  MAIT, Rohini
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

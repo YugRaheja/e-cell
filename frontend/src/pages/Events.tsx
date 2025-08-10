@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MapPin, Clock, Users, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ const upcomingEvents = [
   {
   id: 6,
   title: 'Orientation Session',
-  date: ' ',
+  date: '2025-09-10',
   time: '11:00 AM',
   location: 'Auditorium',
   description: 'The Orientation of the Entrepreneurship Development Cell (EDC) at MAIT introduces students to the world of startups, innovation, and business opportunities.',
@@ -187,8 +187,6 @@ id: 11,
      'Topic: Entrepreneurship and Innovation as Career Opportunity', 
      'Platform: MS Teams',
      'Collaboration: Institute Innovation Council, MAIT',
-,
-
   ],
   outcomes: '🚀 Successful Prototypes & Solutions: Participants built innovative tech solutions addressing industry challenges. 🏆 Winning Teams Recognized: Top teams received cash prizes, mentorship, and internship offers. 🤝 Networking & Collaboration: Students connected with industry leaders, startups, and fellow tech enthusiasts.💡 Skill Enhancement: Participants gained hands-on experience in coding, problem-solving, and teamwork.'
 },
@@ -257,7 +255,26 @@ id: 13,
 
 ];
 
-const EventModal = ({ event, isOpen, onClose }) => {
+interface EventType {
+  id: number;
+  title: string | JSX.Element;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  image: string;
+  category: string;
+  highlights?: string[];
+  outcomes?: string;
+}
+
+interface EventModalProps {
+  event: EventType;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const EventModal = ({ event, isOpen, onClose }: EventModalProps) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -273,7 +290,7 @@ const EventModal = ({ event, isOpen, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl"
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-4">
@@ -314,7 +331,7 @@ const EventModal = ({ event, isOpen, onClose }) => {
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold mb-2">Event Highlights</h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                    {event.highlights.map((highlight, index) => (
+                    {event.highlights.map((highlight: string, index: number) => (
                       <li key={index}>{highlight}</li>
                     ))}
                   </ul>
@@ -335,9 +352,14 @@ const EventModal = ({ event, isOpen, onClose }) => {
   );
 };
 
-const EventList = ({ events, isPast }) => {
+interface EventListProps {
+  events: EventType[];
+  isPast: boolean;
+}
+
+const EventList = ({ events, isPast }: EventListProps) => {
   const navigate = useNavigate();
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
 
   return (
     <>
@@ -347,49 +369,56 @@ const EventList = ({ events, isPast }) => {
         exit={{ opacity: 0, y: -20 }}
         className="grid grid-cols-1 gap-8"
       >
-        {events.map((event) => (
+  {events.map((event: EventType) => (
           <motion.div
             key={event.id}
             whileHover={{ y: -5 }}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
           >
             <div className="md:flex">
+              {/* Fixed Image Ratio */}
               <div className="md:w-1/3">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-64 md:h-full object-cover"
-                />
+                <div className="aspect-[4/3] w-full">
+                    <img
+                      src={event.image}
+                      alt={typeof event.title === 'string' ? event.title : 'Event Image'}
+                      className="w-full h-full object-cover object-center"
+                    />
+                </div>
               </div>
-              <div className="p-6 md:w-2/3">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold">{event.title}</h3>
-                  <span className="px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100">
-                    {event.category}
-                  </span>
+
+              <div className="p-6 md:w-2/3 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold">{event.title}</h3>
+                    <span className="px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100">
+                      {event.category}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {event.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 text-primary-500 mr-2" />
+                      <span>{new Date(event.date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 text-primary-500 mr-2" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 text-primary-500 mr-2" />
+                      <span>{event.location}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-5 h-5 text-primary-500 mr-2" />
+                      <span>Limited Seats</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {event.description}
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-center">
-                    <Calendar className="w-5 h-5 text-primary-500 mr-2" />
-                    <span>{new Date(event.date).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-5 h-5 text-primary-500 mr-2" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="w-5 h-5 text-primary-500 mr-2" />
-                    <span>{event.location}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="w-5 h-5 text-primary-500 mr-2" />
-                    <span>Limited Seats</span>
-                  </div>
-                </div>
-                <div className="flex gap-4">
+
+                <div className="flex gap-4 mt-4">
                   {!isPast && (
                     <>
                       <motion.button
@@ -438,7 +467,7 @@ const EventList = ({ events, isPast }) => {
   );
 };
 
-const Events: React.FC = () => {
+const Events = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
